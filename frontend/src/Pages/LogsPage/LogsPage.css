@@ -1,0 +1,57 @@
+.log-page-card {
+	border-radius: 20px;
+}
+
+.logs-filter-date-style {
+	background-color: #D8D8D8;
+	border: none;
+	border-radius: 8px;
+	padding: 8px;
+}
+
+.logs-filter-apply-button-style {
+	background-color: #A71414;
+	border: none;
+	
+}
+
+.logs-filter-apply-button-style:hover {
+	background-color: #DE1F1F;
+}
+.logs-filter-apply-button-style:active {
+	background-color: #610404 !important;
+}
+
+.logs-filter-clear-button-style {
+	background-color: #6c757d;
+	border: none;
+}
+
+.logs-filter-clear-button-style:hover {
+	background-color: #99a1a8;
+}
+.logs-filter-clear-button-style:active {
+	background-color: #2e3031 !important;
+}
+
+.list-log-type-create {
+	background-color: rgba(0, 255, 55, 0.2) ;
+	font-size: 13px;
+	border-radius: 20px;
+}
+
+.list-log-type-update {
+	background-color: rgba(255, 89, 0, 0.2) ;
+	font-size: 13px;
+	border-radius: 20px;
+}
+
+.list-log-type-view {
+	background-color: rgba(0, 72, 255, 0.2) ;
+	font-size: 13px;
+	border-radius: 20px;
+}
+
+.list-log-div-card-body-content p{
+	margin: 0;
+}

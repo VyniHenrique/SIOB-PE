@@ -1,0 +1,100 @@
+.card-top-style {
+	margin-top: 3rem;
+	min-height: 9.9375rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 20px;
+}
+
+.card-list-style{
+	border-radius: 25px;
+}
+
+.home-button-style {
+	display: flex;
+	align-items: center;
+	margin-top: 0;
+	justify-content: center;
+	height: 4.875rem;
+
+	font-size: 24px;
+	font-weight: 500;
+
+	border: none;
+	border-radius: 8px;
+	background-color: #A71414;
+
+}
+
+.home-button-style:hover {
+	background-color: #DE1F1F;
+}
+.home-button-style:active {
+	background-color: #f05050 !important;
+}
+
+.home-header-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.home-header-content h4{
+	font-size: 23px;
+	color: #190E0D;
+	opacity: 70%;
+	font-weight: 500;
+}
+.home-header-content  h2{
+	color: #000000;
+	opacity: 80%;
+	font-weight: bold;
+}
+
+.occurrence-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.home-card-map {
+	min-height: 30rem;
+}
+
+.page-link:hover  {
+	background-color: #A71414;
+	color: #ffffff;
+}
+
+.page-link:focus  {
+	box-shadow: none;
+	border-color: #A71414;
+}
+
+.page-link:active  {
+	background-color: #f05050 !important;
+}
+
+.list-occurrence-button-style {
+	background-color: #D9D9D9;
+	color: #000000;
+	border: none;
+}
+
+.list-occurrence-button-style:hover {
+	background-color: #A71414;
+}
+
+.list-occurrence-button-style:active {
+	background-color: #f05050 !important;
+}
+
+
+.list-occurrence-form-control-style:focus {
+	box-shadow: none;
+	border-color: #A71414;
+}

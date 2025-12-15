@@ -1,0 +1,64 @@
+.form-label-style{
+	font-size: 16px;
+	color: #190E0D;
+	font-family: "Montserrat Alternates", sans-serif;
+	font-weight: 500;
+}
+
+.form-control-style{
+	background-color: rgba(99, 115, 32, 0.1);
+	box-shadow: none;
+	color: #000;
+	height: 48px;
+}
+
+.form-control-style:focus{
+	box-shadow: 0 1px 10px 2px rgba(26, 33, 61, 0.5);
+}
+
+.form-group-style{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: start;
+	/* margin-top: 0.5rem; */
+	padding-left: 4rem;
+	padding-right: 4rem;
+}
+
+
+.button-style{
+	bottom: 4rem;
+	left: 61.5%;
+	width: 16.25rem;
+	height: 3.125rem;
+	margin-top: 6rem;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-size: 28px;
+
+	background-color: #030B2F;
+	border: 0;
+	border-radius: 10px;
+
+	line-height: 2.5rem;
+}
+
+
+.div-checkbox{
+	display: flex;
+	align-items: start;
+	justify-content: start;
+	padding-left: 4rem;
+	padding-top: 0.5rem;
+}
+
+.checkbox-style .form-check-input {
+	background-color: #888888;
+	box-shadow: none;
+	border: none;
+}
+
+.checkbox-style .form-check-input:checked {
+	background-color: #1651DB;
+}

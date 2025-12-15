@@ -1,0 +1,43 @@
+.card-occurrence {	
+	background-color: #D9D9D9;
+	border-radius: 15px;
+	cursor: pointer;
+	transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card-occurrence:hover {
+	box-shadow: -5px 0px 0px 0 rgb(222 31 31);
+  	transform: translateX(5px);
+  	cursor: pointer;
+}
+
+.card-body-occurrence {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card-body-occurrence h4{
+	margin-bottom: 0.5rem;
+	font-size: 20px;
+}
+
+.card-body-occurrence p{
+	margin-bottom: 0;
+	font-size: 16px;
+	padding-right: 0.5rem;
+}
+
+.div-card-body-occurrence {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.button-modal-occurrence {
+	background-color: #D9D9D9;
+	border: none;
+	color: #000000;
+}
+

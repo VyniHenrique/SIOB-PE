@@ -1,0 +1,47 @@
+.user-management-new-user-button-style {
+	min-width: 12rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #A71414;
+	border: none;
+}
+
+
+.user-management-new-user-button-style:hover {
+	background-color: #DE1F1F;
+}
+.user-management-new-user-button-style:active {
+	background-color: #f05050 !important;
+}
+
+.user-management-edit-button-style{
+	background-color: #DEDEDE;
+	border: none;
+	color: #000000;
+}
+
+.user-management-edit-button-style:hover {
+	background-color: #fded0d;
+	color: #000000;
+}
+
+.user-management-edit-button-style:active {
+	background-color: #f0d850 !important;
+	color: #000000 !important;
+}
+
+.user-management-delete-button-style {
+	background-color: #DEDEDE;
+	border: none;
+	color: #000000;
+}
+
+.user-management-delete-button-style:hover {
+	background-color: #DE1F1F;
+}
+
+.user-management-delete-button-style:active {
+	background-color: #f05050 !important;
+}

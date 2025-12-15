@@ -1,0 +1,10 @@
+# Configuração de Build (você já deve ter isso nas configs do site)
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Regra de Redirect (O importante é isso aqui)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

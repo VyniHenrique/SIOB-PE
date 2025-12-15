@@ -1,0 +1,15 @@
+.register-user-register-new-user-style {
+	bottom: 4rem;
+	left: 61.5%;
+	width: 16.25rem;
+	height: 3.125rem;
+	font-family: "Montserrat Alternates", sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+
+	background-color: #030B2F;
+	border: 0;
+	border-radius: 10px;
+
+	line-height: 2.5rem;
+}

@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      uri: ${DATASOURCE_URI}
+      database: SIOB-PE
