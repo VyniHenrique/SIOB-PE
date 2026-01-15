@@ -1,6 +1,6 @@
-package com.siob_pe.siob_pe.Controller.DTO;
+package com.siob_pe.siob_pe.controller.DTO;
 
-import com.siob_pe.siob_pe.Model.TipoUsuario;
+import com.siob_pe.siob_pe.model.TipoUsuario;
 
 
 public record UsuarioDTO(

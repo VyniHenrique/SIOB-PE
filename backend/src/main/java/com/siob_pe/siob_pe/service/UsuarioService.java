@@ -1,12 +1,11 @@
-package com.siob_pe.siob_pe.Service;
+package com.siob_pe.siob_pe.service;
 
-import com.siob_pe.siob_pe.Model.Usuario;
-import com.siob_pe.siob_pe.Repository.UsuarioRepository;
+import com.siob_pe.siob_pe.model.Usuario;
+import com.siob_pe.siob_pe.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class UsuarioService {

@@ -1,13 +1,12 @@
-package com.siob_pe.siob_pe.Service;
+package com.siob_pe.siob_pe.service;
 
-import com.siob_pe.siob_pe.Model.Ocorrencia;
-import com.siob_pe.siob_pe.Model.SituacaoOcorrencia;
-import com.siob_pe.siob_pe.Repository.OcorrenciaRepository;
+import com.siob_pe.siob_pe.model.Ocorrencia;
+import com.siob_pe.siob_pe.model.SituacaoOcorrencia;
+import com.siob_pe.siob_pe.repository.OcorrenciaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class OcorrenciaService {

@@ -1,8 +1,8 @@
-package com.siob_pe.siob_pe.Controller.DTO;
+package com.siob_pe.siob_pe.controller.DTO;
 
-import com.siob_pe.siob_pe.Model.SituacaoOcorrencia;
-import com.siob_pe.siob_pe.Model.TipoLogradouro;
-import com.siob_pe.siob_pe.Model.TipoNaturezaOcorrencia;
+import com.siob_pe.siob_pe.model.SituacaoOcorrencia;
+import com.siob_pe.siob_pe.model.TipoLogradouro;
+import com.siob_pe.siob_pe.model.TipoNaturezaOcorrencia;
 
 import java.time.LocalDateTime;
 

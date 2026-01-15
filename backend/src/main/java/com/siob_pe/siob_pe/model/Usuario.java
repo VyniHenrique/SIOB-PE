@@ -1,4 +1,4 @@
-package com.siob_pe.siob_pe.Model;
+package com.siob_pe.siob_pe.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;

@@ -1,4 +1,4 @@
-package com.siob_pe.siob_pe.Model;
+package com.siob_pe.siob_pe.model;
 
 public enum TipoNaturezaOcorrencia {
 

@@ -1,9 +1,9 @@
-package com.siob_pe.siob_pe.Controller;
+package com.siob_pe.siob_pe.controller;
 
 
-import com.siob_pe.siob_pe.Controller.DTO.UsuarioDTO;
-import com.siob_pe.siob_pe.Model.Usuario;
-import com.siob_pe.siob_pe.Service.UsuarioService;
+import com.siob_pe.siob_pe.controller.DTO.UsuarioDTO;
+import com.siob_pe.siob_pe.model.Usuario;
+import com.siob_pe.siob_pe.service.UsuarioService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

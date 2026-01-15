@@ -1,7 +1,7 @@
-package com.siob_pe.siob_pe.Controller.mappers;
+package com.siob_pe.siob_pe.controller.mappers;
 
-import com.siob_pe.siob_pe.Controller.DTO.OcorrenciaDTO;
-import com.siob_pe.siob_pe.Model.Ocorrencia;
+import com.siob_pe.siob_pe.controller.DTO.OcorrenciaDTO;
+import com.siob_pe.siob_pe.model.Ocorrencia;
 import org.mapstruct.*;
 
 @Mapper(componentModel = "spring")

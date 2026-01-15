@@ -1,18 +1,16 @@
-package com.siob_pe.siob_pe.Controller;
+package com.siob_pe.siob_pe.controller;
 
-import com.siob_pe.siob_pe.Controller.DTO.OcorrenciaDTO;
-import com.siob_pe.siob_pe.Controller.mappers.OcorrenciaMapper;
-import com.siob_pe.siob_pe.Model.Ocorrencia;
-import com.siob_pe.siob_pe.Model.SituacaoOcorrencia;
-import com.siob_pe.siob_pe.Service.OcorrenciaService;
+import com.siob_pe.siob_pe.controller.DTO.OcorrenciaDTO;
+import com.siob_pe.siob_pe.controller.mappers.OcorrenciaMapper;
+import com.siob_pe.siob_pe.model.Ocorrencia;
+import com.siob_pe.siob_pe.model.SituacaoOcorrencia;
+import com.siob_pe.siob_pe.service.OcorrenciaService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/ocorrencia")
