@@ -1,7 +1,7 @@
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import "./Occurrence.css";
 import { ArrowUpRightIcon, TrashIcon } from "@phosphor-icons/react";
-import { apiRenderLink } from "../../routes/routes";
+import { apiLocalHost } from "../../routes/routes";
 
 interface Props {
   id: string;
@@ -36,7 +36,7 @@ export function Occurrence({
 
   const handleDeleteIncident = async (id: string) => {
   try{
-    const response = await fetch(`${apiRenderLink}/ocorrencia/${id}`, {
+    const response = await fetch(`${apiLocalHost}/ocorrencia/${id}`, {
       method: "DELETE"
     });
     if (response.ok){

@@ -65,13 +65,10 @@ public class UsuarioController implements GenericController {
             @RequestParam("matricula") String matricula,
             @RequestParam("senha") String senha) {
 
-    Optional<Usuario> optionalUsuario = usuarioService.buscarPorMatricula(matricula);
 
-    if (optionalUsuario.isPresent()) {
-        boolean userExist = usuarioService.validarLogin(optionalUsuario.get().getSenha(), optionalUsuario.get().getMatricula());
+        boolean userExist = usuarioService.validarLogin(matricula, senha);
         if (userExist) {
             return ResponseEntity.ok().build();
-        }
     }
         return ResponseEntity.notFound().build();
     }

@@ -1,7 +1,11 @@
 package com.siob_pe.siob_pe.config;
 
+import com.siob_pe.siob_pe.model.TipoUsuario;
+import com.siob_pe.siob_pe.security.CustomUserDetailsService;
+import com.siob_pe.siob_pe.service.UsuarioService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -25,7 +29,12 @@ public class SecutityConfiguration {
                 .csrf( csrf -> csrf.disable())
                 .formLogin(Customizer.withDefaults())
                 .httpBasic(Customizer.withDefaults())
-                .authorizeHttpRequests(http -> http.anyRequest().authenticated())
+                .authorizeHttpRequests(authorize -> {
+                    authorize.requestMatchers("/usuario/**").hasAnyRole("ADMIN", "CHEFE");
+//                    authorize.requestMatchers(HttpMethod.POST,"/usuario/**").hasRole("ADMIN");
+                    authorize.requestMatchers("/livros/**").hasAnyRole("ADMIN", "CHEFE", "ANALISTA");
+                    authorize.anyRequest().authenticated();
+                })
                 .build();
     }
 
@@ -35,15 +44,7 @@ public class SecutityConfiguration {
     }
 
     @Bean
-    public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder){
-
-        UserDetails user1 = User.builder()
-                .username("ADMIN")
-                .password(passwordEncoder.encode("ADMIN"))
-                .roles("USER")
-                .build();
-
-
-        return new InMemoryUserDetailsManager(user1);
+    public UserDetailsService userDetailsService(UsuarioService usuarioService){
+        return new CustomUserDetailsService(usuarioService);
     }
 }
