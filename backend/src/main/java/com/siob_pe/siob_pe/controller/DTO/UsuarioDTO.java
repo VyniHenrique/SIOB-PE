@@ -2,10 +2,12 @@ package com.siob_pe.siob_pe.controller.DTO;
 
 import com.siob_pe.siob_pe.model.TipoUsuario;
 
+import java.util.UUID;
+
 
 public record UsuarioDTO(
 
-        String id,
+        UUID id,
 
         String matricula,
 

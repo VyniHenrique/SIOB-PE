@@ -2,9 +2,14 @@ package com.siob_pe.siob_pe.service;
 
 import com.siob_pe.siob_pe.model.Ocorrencia;
 import com.siob_pe.siob_pe.model.SituacaoOcorrencia;
+import com.siob_pe.siob_pe.model.TipoNaturezaOcorrencia;
 import com.siob_pe.siob_pe.repository.OcorrenciaRepository;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
+import org.springframework.data.jpa.domain.Specification;
 
+
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -37,6 +42,7 @@ public class OcorrenciaService {
             salvar(ocorrencia);
         }
     }
+
 
     public List<Ocorrencia> buscarTodos(){
         return ocorrenciaRepository.findAll();

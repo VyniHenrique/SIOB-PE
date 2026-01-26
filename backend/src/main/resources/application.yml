@@ -1,5 +1,10 @@
 spring:
-  data:
-    mongodb:
-      uri: ${DATASOURCE_URI}
-      database: SIOB-PE
+    datasource:
+      url: ${DATASOURCE_URL}
+      username: ${DATASOURCE_USERNAME}
+      password: ${DATASOURCE_PASSWORD}
+      driver-class-name: org.postgresql.Driver
+    jpa:
+      hibernate:
+        # Para gerar as tabelas automaticamente
+        # ddl-auto: update

@@ -1,21 +1,24 @@
 package com.siob_pe.siob_pe.model;
 
+import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.UUID;
 
+@Entity
+@Table(name = "usuario", schema = "public")
 @Data
-@Document(collection = "Usuario")
 public class Usuario {
 
     @Id
-    private String id;
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     private String matricula;
 
@@ -25,16 +28,20 @@ public class Usuario {
 
     private String senha;
 
-    private TipoUsuario tipoUsuario;
-
     private boolean usuarioAtivo;
 
+    @Enumerated(EnumType.STRING)
+    private TipoUsuario tipoUsuario;
+
+    @OneToMany(mappedBy = "usuario",fetch = FetchType.LAZY)
+    private List<Ocorrencia> ocorrencias;
+
     @CreatedDate
-    @Field("data_cadastro")
+    @Column(name = "data_cadastro")
     private LocalDateTime dataCadastro;
 
     @LastModifiedDate
-    @Field("data_atualizacao")
-    private LocalDate dataAtualizacao;
+    @Column(name = "data_atualizacao")
+    private LocalDateTime dataAtualizacao;
 
 }

@@ -1,20 +1,23 @@
 package com.siob_pe.siob_pe.model;
 
+import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
+@Entity
+@Table(name = "ocorrencia", schema = "public")
 @Data
-@Document(collection = "Ocorrencia")
 public class Ocorrencia {
 
     @Id
-    private String id;
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
+
     private String diretoria;
     private String viaturaEmpregada;
     private String numeroAviso;
@@ -29,17 +32,27 @@ public class Ocorrencia {
     private String ais;
     private String municipio;
     private String bairro;
-    private TipoLogradouro tipoLogradouro;
     private String logradouro;
-    private TipoNaturezaOcorrencia tipoNaturezaOcorrencia;
     private String subgrupoOcorrencia;
+
+    @Enumerated(EnumType.STRING)
+    private TipoLogradouro tipoLogradouro;
+
+    @Enumerated(EnumType.STRING)
+    private TipoNaturezaOcorrencia tipoNaturezaOcorrencia;
+
+    @Enumerated(EnumType.STRING)
     private SituacaoOcorrencia situacaoOcorrencia;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_usuario")
+    private Usuario usuario;
+
     @CreatedDate
-    @Field("data_cadastro")
+    @Column(name = "data_cadastro")
     private LocalDateTime dataCadastro;
 
     @LastModifiedDate
-    @Field("data_atualizacao")
+    @Column(name = "data_atualizacao")
     private LocalDateTime dataAtualizacao;
 }

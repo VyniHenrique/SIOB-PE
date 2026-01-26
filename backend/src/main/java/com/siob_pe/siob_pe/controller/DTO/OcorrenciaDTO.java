@@ -5,10 +5,11 @@ import com.siob_pe.siob_pe.model.TipoLogradouro;
 import com.siob_pe.siob_pe.model.TipoNaturezaOcorrencia;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public record OcorrenciaDTO(
 
-        String id,
+        UUID id,
         String diretoria,
         String viaturaEmpregada,
         String numeroAviso,
