@@ -1,6 +1,6 @@
 package com.siob_pe.siob_pe.controller;
 
-import com.siob_pe.siob_pe.controller.DTO.OcorrenciaDTO;
+import com.siob_pe.siob_pe.controller.dto.OcorrenciaDTO;
 import com.siob_pe.siob_pe.controller.mappers.OcorrenciaMapper;
 import com.siob_pe.siob_pe.model.Ocorrencia;
 import com.siob_pe.siob_pe.model.SituacaoOcorrencia;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/ocorrencia")

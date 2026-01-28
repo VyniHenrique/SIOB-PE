@@ -1,4 +1,4 @@
-package com.siob_pe.siob_pe.controller.DTO;
+package com.siob_pe.siob_pe.controller.dto;
 
 import com.siob_pe.siob_pe.model.TipoUsuario;
 

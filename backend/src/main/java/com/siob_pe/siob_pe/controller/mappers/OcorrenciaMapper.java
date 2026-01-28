@@ -1,6 +1,6 @@
 package com.siob_pe.siob_pe.controller.mappers;
 
-import com.siob_pe.siob_pe.controller.DTO.OcorrenciaDTO;
+import com.siob_pe.siob_pe.controller.dto.OcorrenciaDTO;
 import com.siob_pe.siob_pe.model.Ocorrencia;
 import org.mapstruct.*;
 

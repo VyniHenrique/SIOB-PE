@@ -1,7 +1,7 @@
 package com.siob_pe.siob_pe.controller;
 
 
-import com.siob_pe.siob_pe.controller.DTO.UsuarioDTO;
+import com.siob_pe.siob_pe.controller.dto.UsuarioDTO;
 import com.siob_pe.siob_pe.model.Usuario;
 import com.siob_pe.siob_pe.service.UsuarioService;
 import org.springframework.http.ResponseEntity;
@@ -58,20 +58,6 @@ public class UsuarioController implements GenericController {
         return ResponseEntity.ok(resposta);
     }
 
-
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @GetMapping
-    public ResponseEntity<UsuarioDTO> loginUsuario(
-            @RequestParam("matricula") String matricula,
-            @RequestParam("senha") String senha) {
-
-
-        boolean userExist = usuarioService.validarLogin(matricula, senha);
-        if (userExist) {
-            return ResponseEntity.ok().build();
-    }
-        return ResponseEntity.notFound().build();
-    }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PutMapping("{matricula}")

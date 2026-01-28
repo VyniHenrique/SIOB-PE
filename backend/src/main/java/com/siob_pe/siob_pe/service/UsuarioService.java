@@ -1,5 +1,6 @@
 package com.siob_pe.siob_pe.service;
 
+import com.siob_pe.siob_pe.exception.MatriculaNaoEncontrada;
 import com.siob_pe.siob_pe.model.Usuario;
 import com.siob_pe.siob_pe.repository.UsuarioRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -29,21 +30,23 @@ public class UsuarioService {
     }
 
     public Optional<Usuario> buscarPorMatricula(String matricula) {
-        return usuarioRepository.findByMatricula(matricula);
+        Optional<Usuario> usuarioOptional = usuarioRepository.findByMatricula(matricula);
+
+        if (usuarioOptional.isEmpty()){
+            throw new MatriculaNaoEncontrada("Matricula não encontrada");
+        }
+
+        return usuarioOptional;
     }
 
+
+    // Verificar se a matricula ja existe e criptografar a senha antes de salvar
     public void atualizar(Usuario usuario) {
         usuarioRepository.save(usuario);
     }
 
     public void deletar(Usuario usuario) {
         usuarioRepository.delete(usuario);
-    }
-
-    public boolean validarLogin(String matricula, String senha) {
-        Optional<Usuario> optionalUsuario = usuarioRepository.findByMatricula(matricula);
-
-        return optionalUsuario.isPresent() && encoder.matches(senha, optionalUsuario.get().getSenha());
     }
 
 
