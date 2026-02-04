@@ -6,6 +6,7 @@
 - Node.js 22
 - Java 21
 - Maven
+- PostgreSQL
 - Docker (Opcional)
 
 ###  Estrutura do Projeto
